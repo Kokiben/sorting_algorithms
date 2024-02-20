@@ -3,31 +3,31 @@
 
 
 /**
- * selection_sort - sorts an array of integers in ascending order
- * @array: The array
- * @size: The size of the array
+ * selection_sort - sorts an array of int in ascending order use Selection sort 
+ * @array: Array
+ * @size: Size of array
  *
  * Return: void
  */
 void selection_sort(int *array, size_t size)
 {
-size_t i, step, min_idx;
-int tmp;
+size_t j, sp, in_m;
+int mp;
 
-for (step = 0; step < size - 1; step++)
+for (sp = 0; sp < size - 1; sp++)
 {
-min_idx = step;
-for (i = step + 1; i < size; i++)
+in_m = sp;
+for (j = sp + 1; j < size; j++)
 {
-if (array[i] < array[min_idx])
-min_idx = i;
+if (array[j] < array[in_m])
+in_m = j;
 }
 
-if (min_idx != step)
+if (in_m != sp)
 {
-tmp = array[step];
-array[step] = array[min_idx];
-array[min_idx] = tmp;
+mp = array[sp];
+array[sp] = array[in_m];
+array[in_m] = mp;
 print_array(array, size);
 }
 }
