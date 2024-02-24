@@ -27,11 +27,11 @@ for (L = 1; L < K; L++)
 {
 arr_count[L + 1] += arr_count[L];
 }
-arr_count(arr_count, K + 1);
+print_array(arr_count, K + 1);
 ax = malloc(sizeof(int) * size);
 for (a = 0; a < size; a++)
 {
-arr_count[array[i]]--;
+arr_count[array[a]]--;
 ax[arr_count[array[a]]] = array[a];
 }
 for (a = 0; a < size; a++)
